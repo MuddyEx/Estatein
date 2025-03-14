@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, Info, Building, Briefcase, LogIn } from 'lucide-react';
-import LogoImg from '../assets/logo.png';
+import LogoImg from '../assets/Logo.png';
 import { motion } from 'framer-motion';
 
 export default function Navbar() {
