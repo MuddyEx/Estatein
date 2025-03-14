@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, Info, Building, Briefcase, LogIn } from 'lucide-react';
 import LogoImg from '../assets/Logo.png';
@@ -11,7 +12,7 @@ export default function Navbar() {
     { name: 'Home', icon: <Home size={16} />, link: '/' },
     { name: 'About Us', icon: <Info size={16} />, link: '/about-us' },
     { name: 'Properties', icon: <Building size={16} />, link: '/properties' },
-    { name: 'Support', icon: <Briefcase size={16} />, link: '/Support' }
+    { name: 'Support', icon: <Briefcase size={16} />, link: '/support' }
   ];
 
   return (
@@ -20,25 +21,25 @@ export default function Navbar() {
         <div className="px-4 mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <div className="flex-shrink-0">
-              <a href="#" className="flex">
+              <Link to="/" className="flex">
                 <img className="w-auto h-8" src={LogoImg} alt="Logo" />
-              </a>
+              </Link>
             </div>
             <div className="hidden lg:flex lg:items-center lg:space-x-10">
               {menuItems.map((item) => (
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   key={item.name}
                   className="flex items-center gap-2 text-base text-white transition-all duration-300 hover:text-[#703BF7]"
                 >
                   {item.icon} {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="lg:flex lg:items-center lg:space-x-6">
-              <a href="#" className="hidden text-base text-white lg:inline-flex hover:text-[#703BF7]">
-                <LogIn  className="mr-2" /> Log in
-              </a>
+              <Link to="/login" className="hidden text-base text-white lg:inline-flex hover:text-[#703BF7]">
+                <LogIn className="mr-2" /> Log in
+              </Link>
               <Button className="bg-black text-white shadow-sm shadow-white px-5 py-2.5 rounded-full hover:bg-[#703BF7] hover:text-black">
                 Join Now
               </Button>
@@ -58,17 +59,17 @@ export default function Navbar() {
               className="lg:hidden bg-[#1A1A1A] shadow-md rounded-lg mt-4 space-y-4 p-4"
             >
               {menuItems.map((item) => (
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   key={item.name}
                   className="flex items-center gap-2 text-base text-white transition-all duration-300 hover:text-[#703BF7]"
                 >
                   {item.icon} {item.name}
-                </a>
+                </Link>
               ))}
-              <a href="#" className="flex items-center gap-2 text-base text-white hover:text-[#703BF7]">
+              <Link to="/login" className="flex items-center gap-2 text-base text-white hover:text-[#703BF7]">
                 <LogIn size={16} /> Log in
-              </a>
+              </Link>
               <Button className="w-full bg-black text-white shadow-sm shadow-white px-5 py-2.5 rounded-full hover:bg-[#703BF7] hover:text-black">
                 Join Now
               </Button>

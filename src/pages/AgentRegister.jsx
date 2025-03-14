@@ -210,15 +210,10 @@ const AgentRegister = () => {
                         href="#"
                         className="text-purple-800 hover:text-purple-900 hover:underline"
                       >
-                        Terms of Service
+                        Terms & Conditions
                       </a>{" "}
-                      and{" "}
-                      <a
-                        href="#"
-                        className="text-purple-800 hover:text-purple-900 hover:underline"
-                      >
-                        Privacy Policy
-                      </a>
+                     
+                      
                     </label>
                   </div>
 
@@ -226,7 +221,7 @@ const AgentRegister = () => {
                   <div>
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-purple-800 border border-transparent rounded-md focus:outline-none hover:bg-purple-900 focus:bg-purple-950"
+                      className="inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-white transition-all duration-200 bg-purple-800 border border-transparent rounded-md focus:outline-none hover:bg-purple-900 focus:bg-purple-950"
                     >
                       Create free account
                     </button>
@@ -237,7 +232,7 @@ const AgentRegister = () => {
               <div className="mt-3 space-y-3">
                 <button
                   type="button"
-                  className="relative inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-gray-700 transition-all duration-200 bg-white border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover:text-black focus:text-black focus:outline-none"
+                  className="relative inline-flex items-center justify-center w-full px-4 py-3 text-base font-semibold text-gray-700 transition-all duration-200 bg-white border-2 border-gray-200 rounded-md hover:bg-gray-100 focus:bg-gray-100 hover:text-black focus:text-black focus:outline-none"
                 >
                   <div className="absolute inset-y-0 left-0 p-4">
                   <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
@@ -267,7 +262,7 @@ const AgentRegister = () => {
                   Sign up with Facebook
                 </button> */}
 
-                <p className="mt-2 text-base text-gray-300">
+                <p className="mt-2 text-center text-base text-gray-300">
                   Already have an account?{" "}
                   <a
                     href="/agent/login"
