@@ -7,6 +7,9 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    historyApiFallback: true,
+  },
   resolve: {
     alias: {
       '@': `${__dirname}/src`, // Use this method instead
