@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'; 
-import { Button } from '@/components/ui/button';
 import { Menu, X, Home, Info, Building, Briefcase, LogIn } from 'lucide-react';
 import LogoImg from '../assets/Logo.png';
 import { motion } from 'framer-motion';
@@ -30,19 +29,19 @@ export default function Navbar() {
                 <Link
                   to={item.link}
                   key={item.name}
-                  className="flex items-center gap-2 text-base text-white transition-all duration-300 hover:text-[#703BF7]"
+                  className="flex items-center gap-2 text-base text-white transition-all duration-300  hover:text-[#703BF7]"
                 >
                   {item.icon} {item.name}
                 </Link>
               ))}
             </div>
             <div className="lg:flex lg:items-center lg:space-x-6">
-              <Link to="/login" className="hidden text-base text-white lg:inline-flex hover:text-[#703BF7]">
+              <Link to="user/login" className="hidden text-base text-white lg:inline-flex hover:text-[#703BF7]">
                 <LogIn className="mr-2" /> Log in
               </Link>
-              <Button className="bg-black text-white shadow-sm shadow-white px-5 py-2.5 rounded-full hover:bg-[#703BF7] hover:text-black">
+              <Link to="user/register" className="bg-black text-white shadow-sm shadow-white px-5 py-1.5 rounded-full hover:bg-[#703BF7] hover:text-black">
                 Join Now
-              </Button>
+              </Link>
             </div>
             <button
               className="lg:hidden p-2 text-white rounded-md focus:outline-none hover:bg-[#292929]"
@@ -67,12 +66,12 @@ export default function Navbar() {
                   {item.icon} {item.name}
                 </Link>
               ))}
-              <Link to="/login" className="flex items-center gap-2 text-base text-white hover:text-[#703BF7]">
+              <Link to="user/login" className="flex items-center gap-2 text-base text-white hover:text-[#703BF7]">
                 <LogIn size={16} /> Log in
               </Link>
-              <Button className="w-full bg-black text-white shadow-sm shadow-white px-5 py-2.5 rounded-full hover:bg-[#703BF7] hover:text-black">
+              <Link to="user/register" className="w-full bg-black text-white shadow-sm shadow-white px-5 py-2.5 rounded-full hover:bg-[#703BF7] hover:text-black">
                 Join Now
-              </Button>
+              </Link>
             </motion.div>
           )}
         </div>
