@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import Wade from '../assets/WadeP.png';
 import Emelie from '../assets/Emelie.png';
-import John from '../assets/john.png';
+import John from '../assets/John.png';
 import Stars from '../assets/Abstract Design.png';
 
 export default function Testimonials() {
